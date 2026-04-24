@@ -26,6 +26,7 @@ sudo apt install -y dnsmasq
 sudo apt update
 sudo apt upgrade -y #added the upgrade to address some of the issues with the install,come back and remove if it causes package conflicts
 # Step 2: Install Python and GStreamer Related Packages
+
 # echo "Installing Python 3 and GStreamer packages..."
 # sudo apt install -y python3
 # sudo apt install -y python3-pip
