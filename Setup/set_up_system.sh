@@ -42,15 +42,14 @@ sudo apt install -y libgl1 libglib2.0-0 # to have open-cv work
 
 # Step 2. Virtual Environment
 echo " Creating Virtual Environment and Installing Python and GStreamer packages..."
-sudo apt install -y python3 python3-venv python3-pip jq
+sudo apt install -y python3 python3-venv python3-pip jq python3-smbus i2c-tools
 sudo apt install -y gstreamer1.0-tools gstreamer1.0-plugins-base \
 gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
 gstreamer1.0-plugins-ugly gstreamer1.0-libav
-python3 -m venv venv
+python3 -m venv venv --system-site-packages
 source venv/bin/activate
 pip install --upgrade pip
-pip install flask flask-login numpy pandas matplotlib opencv-python scikit-image watchdog os glob pickle cv2 threadding json time logging psutil datetime shutil re pwd subprocess traceback
-sudo apt install -y python3-smbus i2c-tools
+pip install flask flask-login numpy pandas matplotlib opencv-python imusensor psutil pandas-stubs easydict
 
 # Step 3: Install wget, ffmpeg, v4l2loopback
 sudo apt install -y wget
